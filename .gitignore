@@ -1,0 +1,29 @@
+# Python virtual environments
+workenv/
+workenv310/
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# HuggingFace caches
+hf_cache/
+hf_cache_tdnn/
+
+# SpeechBrain experiment outputs
+**/results/
+
+# Model files
+*.ckpt
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# Dataset files
+*.tar
+*.wav
+
+# Logs
+*.log
