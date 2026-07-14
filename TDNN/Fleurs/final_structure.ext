@@ -1,0 +1,356 @@
+Folder PATH listing for volume Acer
+Volume serial number is 000000F6 6042:7170
+C:.
+¦   final_structure.ext
+¦   meta.json
+¦   structure_after_copy.txt
+¦   train_ecapa_updated.yaml
+¦   
++---10Classes
+¦   +---16Bit
+¦   ¦   ¦   meta.json
+¦   ¦   ¦   train_ecapa_updated.yaml
+¦   ¦   ¦   
+¦   ¦   +---results
+¦   ¦       +---epaca
+¦   ¦           +---1988
+¦   ¦               ¦   env.log
+¦   ¦               ¦   hyperparams.yaml
+¦   ¦               ¦   log.txt
+¦   ¦               ¦   train_log.txt
+¦   ¦               ¦   
+¦   ¦               +---save
+¦   ¦                   ¦   label_encoder.txt
+¦   ¦                   ¦   
+¦   ¦                   +---CKPT+2026-06-27+22-24-05+00
+¦   ¦                           brain.ckpt
+¦   ¦                           CKPT.yaml
+¦   ¦                           classifier.ckpt
+¦   ¦                           counter.ckpt
+¦   ¦                           dataloader-TRAIN.ckpt
+¦   ¦                           embedding_model.ckpt
+¦   ¦                           normalizer.ckpt
+¦   ¦                           optimizer.ckpt
+¦   ¦                           
+¦   +---16BitTrain1BitTestt
+¦   ¦   ¦   train_ecapa_updated.yaml
+¦   ¦   ¦   
+¦   ¦   +---results
+¦   ¦       +---epaca
+¦   ¦           +---1988
+¦   ¦               ¦   env.log
+¦   ¦               ¦   hyperparams.yaml
+¦   ¦               ¦   log.txt
+¦   ¦               ¦   train_log.txt
+¦   ¦               ¦   
+¦   ¦               +---save
+¦   ¦                   ¦   label_encoder.txt
+¦   ¦                   ¦   
+¦   ¦                   +---CKPT+2026-07-04+15-41-53+00
+¦   ¦                           brain.ckpt
+¦   ¦                           CKPT.yaml
+¦   ¦                           classifier.ckpt
+¦   ¦                           counter.ckpt
+¦   ¦                           dataloader-TRAIN.ckpt
+¦   ¦                           embedding_model.ckpt
+¦   ¦                           normalizer.ckpt
+¦   ¦                           optimizer.ckpt
+¦   ¦                           
+¦   +---1Bit
+¦   ¦   ¦   meta.json
+¦   ¦   ¦   train_ecapa_updated.yaml
+¦   ¦   ¦   
+¦   ¦   +---results
+¦   ¦   ¦   +---epaca
+¦   ¦   ¦       +---1988
+¦   ¦   ¦           ¦   env.log
+¦   ¦   ¦           ¦   hyperparams.yaml
+¦   ¦   ¦           ¦   log.txt
+¦   ¦   ¦           ¦   train_log.txt
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---save
+¦   ¦   ¦               ¦   label_encoder.txt
+¦   ¦   ¦               ¦   
+¦   ¦   ¦               +---CKPT+2026-07-04+16-52-49+00
+¦   ¦   ¦                       brain.ckpt
+¦   ¦   ¦                       CKPT.yaml
+¦   ¦   ¦                       classifier.ckpt
+¦   ¦   ¦                       counter.ckpt
+¦   ¦   ¦                       dataloader-TRAIN.ckpt
+¦   ¦   ¦                       embedding_model.ckpt
+¦   ¦   ¦                       normalizer.ckpt
+¦   ¦   ¦                       optimizer.ckpt
+¦   ¦   ¦                       
+¦   ¦   +---__pycache__
+¦   ¦           speech_quantization.cpython-310.pyc
+¦   ¦           
+¦   +---1BitTrain16BitTest
+¦   ¦   ¦   train_ecapa_updated.yaml
+¦   ¦   ¦   
+¦   ¦   +---results
+¦   ¦       +---epaca
+¦   ¦           +---1988
+¦   ¦               ¦   env.log
+¦   ¦               ¦   hyperparams.yaml
+¦   ¦               ¦   log.txt
+¦   ¦               ¦   train_log.txt
+¦   ¦               ¦   
+¦   ¦               +---save
+¦   ¦                   ¦   label_encoder.txt
+¦   ¦                   ¦   
+¦   ¦                   +---CKPT+2026-07-03+18-15-40+00
+¦   ¦                   ¦       brain.ckpt
+¦   ¦                   ¦       CKPT.yaml
+¦   ¦                   ¦       classifier.ckpt
+¦   ¦                   ¦       counter.ckpt
+¦   ¦                   ¦       dataloader-TRAIN.ckpt
+¦   ¦                   ¦       embedding_model.ckpt
+¦   ¦                   ¦       normalizer.ckpt
+¦   ¦                   ¦       optimizer.ckpt
+¦   ¦                   ¦       
+¦   ¦                   +---CKPT+2026-07-04+17-27-33+00
+¦   ¦                           brain.ckpt
+¦   ¦                           CKPT.yaml
+¦   ¦                           classifier.ckpt
+¦   ¦                           counter.ckpt
+¦   ¦                           dataloader-TRAIN.ckpt
+¦   ¦                           embedding_model.ckpt
+¦   ¦                           normalizer.ckpt
+¦   ¦                           optimizer.ckpt
+¦   ¦                           
+¦   +---2Bit
+¦   ¦   ¦   train_ecapa_updated.yaml
+¦   ¦   ¦   
+¦   ¦   +---results
+¦   ¦   ¦   +---epaca
+¦   ¦   ¦       +---1988
+¦   ¦   ¦           ¦   env.log
+¦   ¦   ¦           ¦   hyperparams.yaml
+¦   ¦   ¦           ¦   log.txt
+¦   ¦   ¦           ¦   train_log.txt
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---save
+¦   ¦   ¦               ¦   label_encoder.txt
+¦   ¦   ¦               ¦   
+¦   ¦   ¦               +---CKPT+2026-07-04+13-04-37+00
+¦   ¦   ¦                       brain.ckpt
+¦   ¦   ¦                       CKPT.yaml
+¦   ¦   ¦                       classifier.ckpt
+¦   ¦   ¦                       counter.ckpt
+¦   ¦   ¦                       dataloader-TRAIN.ckpt
+¦   ¦   ¦                       embedding_model.ckpt
+¦   ¦   ¦                       normalizer.ckpt
+¦   ¦   ¦                       optimizer.ckpt
+¦   ¦   ¦                       
+¦   ¦   +---Scheme2
+¦   ¦   ¦       meta.json
+¦   ¦   ¦       
+¦   ¦   +---Scheme3
+¦   ¦   ¦       meta.json
+¦   ¦   ¦       
+¦   ¦   +---Scheme4
+¦   ¦   ¦       meta.json
+¦   ¦   ¦       
+¦   ¦   +---Scheme5
+¦   ¦   ¦       train_ecapa_updated.yaml
+¦   ¦   ¦       
+¦   ¦   +---__pycache__
+¦   ¦           speech_quantization.cpython-310.pyc
+¦   ¦           
+¦   +---4Bit
+¦   ¦   ¦   train_ecapa_updated.yaml
+¦   ¦   ¦   
+¦   ¦   +---results
+¦   ¦   ¦   +---epaca
+¦   ¦   ¦       +---1988
+¦   ¦   ¦           ¦   env.log
+¦   ¦   ¦           ¦   hyperparams.yaml
+¦   ¦   ¦           ¦   log.txt
+¦   ¦   ¦           ¦   train_log.txt
+¦   ¦   ¦           ¦   
+¦   ¦   ¦           +---save
+¦   ¦   ¦               ¦   label_encoder.txt
+¦   ¦   ¦               ¦   
+¦   ¦   ¦               +---CKPT+2026-07-04+13-43-26+00
+¦   ¦   ¦                       brain.ckpt
+¦   ¦   ¦                       CKPT.yaml
+¦   ¦   ¦                       classifier.ckpt
+¦   ¦   ¦                       counter.ckpt
+¦   ¦   ¦                       dataloader-TRAIN.ckpt
+¦   ¦   ¦                       embedding_model.ckpt
+¦   ¦   ¦                       normalizer.ckpt
+¦   ¦   ¦                       optimizer.ckpt
+¦   ¦   ¦                       
+¦   ¦   +---Scheme2
+¦   ¦   ¦       meta.json
+¦   ¦   ¦       
+¦   ¦   +---Scheme3
+¦   ¦   ¦       meta.json
+¦   ¦   ¦       
+¦   ¦   +---Scheme4
+¦   ¦   ¦   ¦   meta.json
+¦   ¦   ¦   ¦   train_ecapa_updated.yaml
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---results
+¦   ¦   ¦       +---epaca
+¦   ¦   ¦           +---1988
+¦   ¦   ¦               ¦   env.log
+¦   ¦   ¦               ¦   hyperparams.yaml
+¦   ¦   ¦               ¦   log.txt
+¦   ¦   ¦               ¦   train_log.txt
+¦   ¦   ¦               ¦   
+¦   ¦   ¦               +---save
+¦   ¦   ¦                   ¦   label_encoder.txt
+¦   ¦   ¦                   ¦   
+¦   ¦   ¦                   +---CKPT+2026-07-04+16-37-55+00
+¦   ¦   ¦                           brain.ckpt
+¦   ¦   ¦                           CKPT.yaml
+¦   ¦   ¦                           classifier.ckpt
+¦   ¦   ¦                           counter.ckpt
+¦   ¦   ¦                           dataloader-TRAIN.ckpt
+¦   ¦   ¦                           embedding_model.ckpt
+¦   ¦   ¦                           normalizer.ckpt
+¦   ¦   ¦                           optimizer.ckpt
+¦   ¦   ¦                           
+¦   ¦   +---Scheme5
+¦   ¦   ¦   ¦   meta.json
+¦   ¦   ¦   ¦   train_ecapa_updated.yaml
+¦   ¦   ¦   ¦   
+¦   ¦   ¦   +---results
+¦   ¦   ¦       +---epaca
+¦   ¦   ¦           +---1988
+¦   ¦   ¦               ¦   env.log
+¦   ¦   ¦               ¦   hyperparams.yaml
+¦   ¦   ¦               ¦   log.txt
+¦   ¦   ¦               ¦   train_log.txt
+¦   ¦   ¦               ¦   
+¦   ¦   ¦               +---save
+¦   ¦   ¦                   ¦   label_encoder.txt
+¦   ¦   ¦                   ¦   
+¦   ¦   ¦                   +---CKPT+2026-07-04+16-48-44+00
+¦   ¦   ¦                           brain.ckpt
+¦   ¦   ¦                           CKPT.yaml
+¦   ¦   ¦                           classifier.ckpt
+¦   ¦   ¦                           counter.ckpt
+¦   ¦   ¦                           dataloader-TRAIN.ckpt
+¦   ¦   ¦                           embedding_model.ckpt
+¦   ¦   ¦                           normalizer.ckpt
+¦   ¦   ¦                           optimizer.ckpt
+¦   ¦   ¦                           
+¦   ¦   +---__pycache__
+¦   ¦           speech_quantization.cpython-310.pyc
+¦   ¦           
+¦   +---8Bit
+¦       ¦   train_ecapa_updated.yaml
+¦       ¦   
+¦       +---results
+¦       ¦   +---epaca
+¦       ¦       +---1988
+¦       ¦           ¦   env.log
+¦       ¦           ¦   hyperparams.yaml
+¦       ¦           ¦   log.txt
+¦       ¦           ¦   train_log.txt
+¦       ¦           ¦   
+¦       ¦           +---save
+¦       ¦               ¦   label_encoder.txt
+¦       ¦               ¦   
+¦       ¦               +---CKPT+2026-07-04+13-39-17+00
+¦       ¦                       brain.ckpt
+¦       ¦                       CKPT.yaml
+¦       ¦                       classifier.ckpt
+¦       ¦                       counter.ckpt
+¦       ¦                       dataloader-TRAIN.ckpt
+¦       ¦                       embedding_model.ckpt
+¦       ¦                       normalizer.ckpt
+¦       ¦                       optimizer.ckpt
+¦       ¦                       
+¦       +---Scheme2
+¦       ¦       meta.json
+¦       ¦       
+¦       +---Scheme3
+¦       ¦       meta.json
+¦       ¦       
+¦       +---Scheme4
+¦       ¦       meta.json
+¦       ¦       
+¦       +---Scheme5
+¦       ¦       meta.json
+¦       ¦       
+¦       +---__pycache__
+¦               speech_quantization.cpython-310.pyc
+¦               
++---configs
+¦       fleurs_16bit.yaml
+¦       fleurs_1bit.yaml
+¦       fleurs_2bit.yaml
+¦       fleurs_4bit.yaml
+¦       fleurs_8bit.yaml
+¦       
++---data_preparation
++---Iteration_2_1bit_Quantization
+¦   ¦   meta.json
+¦   ¦   train_ecapa_updated.yaml
+¦   ¦   
+¦   +---results
+¦       +---epaca
+¦           +---1988
+¦               ¦   env.log
+¦               ¦   hyperparams.yaml
+¦               ¦   log.txt
+¦               ¦   train_log.txt
+¦               ¦   
+¦               +---save
+¦                   ¦   label_encoder.txt
+¦                   ¦   
+¦                   +---CKPT+2026-06-16+15-07-13+00
+¦                           brain.ckpt
+¦                           CKPT.yaml
+¦                           classifier.ckpt
+¦                           counter.ckpt
+¦                           dataloader-TRAIN.ckpt
+¦                           embedding_model.ckpt
+¦                           normalizer.ckpt
+¦                           optimizer.ckpt
+¦                           
++---Multi_ClassWith1bit
+¦   ¦   create_wds_shards_fleurs copy.py
+¦   ¦   meta copy.json
+¦   ¦   meta.json
+¦   ¦   train_ecapa_updated.yaml
+¦   ¦   
+¦   +---results
+¦   ¦   +---epaca
+¦   ¦       +---1988
+¦   ¦           ¦   env.log
+¦   ¦           ¦   hyperparams.yaml
+¦   ¦           ¦   log.txt
+¦   ¦           ¦   train_log.txt
+¦   ¦           ¦   
+¦   ¦           +---save
+¦   ¦               ¦   label_encoder.txt
+¦   ¦               ¦   
+¦   ¦               +---CKPT+2026-06-24+15-39-04+00
+¦   ¦               +---CKPT+2026-06-27+08-19-47+00
+¦   ¦                       brain.ckpt
+¦   ¦                       CKPT.yaml
+¦   ¦                       classifier.ckpt
+¦   ¦                       counter.ckpt
+¦   ¦                       dataloader-TRAIN.ckpt
+¦   ¦                       embedding_model.ckpt
+¦   ¦                       normalizer.ckpt
+¦   ¦                       optimizer.ckpt
+¦   ¦                       
+¦   +---results copy
+¦   ¦   +---epaca
+¦   ¦       +---1988
+¦   ¦           +---save
+¦   ¦               +---CKPT+2026-06-24+15-39-04+00
+¦   +---__pycache__
+¦   +---__pycache__ copy
++---results
+¦   +---epaca
+¦       +---1988
+¦           +---save
+¦               +---CKPT+2026-06-15+17-48-25+00
++---src
++---__pycache__
