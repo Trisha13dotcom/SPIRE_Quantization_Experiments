@@ -25,7 +25,6 @@ en = load_dataset("google/fleurs", "en_us", split="train[:1000]", trust_remote_c
 
 """Extracting the MFCC features and creating the dataset
 
-Make changes to include quantization here
 """
 
 from speech_quantization import quantize, load_and_quantize, QuantizationScheme
@@ -36,17 +35,14 @@ from speechalgo.features import SpectralFeatures, TemporalFeatures, DeltaFeature
 
 
 
-def extract_mfcc(audio_array, sample_rate=16000, n_mfcc=40, max_len=200): #this function will take a single audio clip as a numpy array and retuem the feature vector for it
-#each number in this vector is the dct coefficient describing the frequency energy shape of one window of the audio signal
+def extract_mfcc(audio_array, sample_rate=16000, n_mfcc=40, max_len=200): 
 
 
-#I am guessing the below line is not needed now that we have applied the quantization because it outputs the number in this fornat
-    # y = audio_array.astype(np.float32) #Conversion of the 16 bit PCM waveform to 32 bits floating point format(the decimal number is represented in 32 bits(1 sign bit, 23 bits mantissa and 8 bits exponent))
+    # y = audio_array.astype(np.float32) #Conversion of the 16 bit PCM waveform to 32 bits floating point format
 
-    mfcc = librosa.feature.mfcc(y=audio_array, sr=sample_rate, n_mfcc=n_mfcc)  # (40, T) this is where the feature extraction takes place(librosa basically runs the full mfcc pipeline as discussed that is the windowing,fft, mel filterbank, log, dct)
+    mfcc = librosa.feature.mfcc(y=audio_array, sr=sample_rate, n_mfcc=n_mfcc)  # (40, T)
 
     # Pad or truncate along time axis
-    # this is done to ensure each of the audio signals have the same legnth since the audio inputs will have different time frames(svm requires that the inputs be of the same size)
     if mfcc.shape[1] < max_len:
         pad = max_len - mfcc.shape[1]
         mfcc = np.pad(mfcc, ((0, 0), (0, pad)))
@@ -60,25 +56,19 @@ def extract_mfcc(audio_array, sample_rate=16000, n_mfcc=40, max_len=200): #this 
         #mfcc = np.concatenate((mfcc, mfcc_delta, mfcc_delta2), axis=0)
         print()
 
-    return mfcc.flatten()  # flattens the feature vector to a length of 8000
+    return mfcc.flatten()  # flattens the feature vector
 
 
-#This is where the dataset conversion essentially takes place
+
 def build_features(dataset, label, sample_rate=16000):
-    X, y = [], [] #X will collect the features and y will collect the labels per audio sample
+    X, y = [], [] 
     for item in dataset:
         audio = item["audio"]["array"] #Extracts the numpy array of the amplitude values
         sr    = item["audio"]["sampling_rate"] #Extracts the sampling rate for the particular audio signal
 
-        # Ig the python script expects a 32 bit floating point input so convert
-        # the raw audio samples into that format before applying the
-        # normalization and the quantization
         audio = np.array(audio, dtype=np.float32)
 
         #CHANGE- Resampling should happen before the quantization
-        # Resample if needed
-        # If the sampling rate for two audio files is different, then the MFCC features for the audio files are not comparable
-        # Hence we bring the sampling rate of all the audio files to a standard value
         if sr != sample_rate:
             audio = librosa.resample(audio, orig_sr=sr, target_sr=sample_rate)
 
@@ -113,20 +103,17 @@ import matplotlib.pyplot as plt
 
 X_train, X_test, y_train, y_test = train_test_split(
     X, y, test_size=0.2, random_state=42, stratify=y
-) #Look into what exactly does the stratify do
-# Random state is necessary for the reproducibility of the same results
+) 
 
 #Implementing Normalization
 scaler = StandardScaler()
-X_train = scaler.fit_transform(X_train)  #i do not understand why there are two different functions for normalization allow me to look into it later
+X_train = scaler.fit_transform(X_train)
 X_test  = scaler.transform(X_test)
 
 # Model building and training
 #model = GaussianNB()
 
 #model.fit(X_train, y_train); #The fit just stores the means and variances per features the actual probability will be calculated during training
-# Did you notice the semi-colon at the end NO RIGHT? this is Python lady
-# Apparently theres a reason for the semi colon- The semicolon suppresses the output in Jupyter notebook. Without it, fit returns the model object and Jupyter prints it something ugly like GaussianNB(). The semicolon just keeps the notebook clean.
 
 model = LogisticRegression(max_iter=10000, random_state=0)
 model.fit(X_train, y_train)
