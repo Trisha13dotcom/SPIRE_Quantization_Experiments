@@ -21,11 +21,6 @@ import numpy as np
 import pandas as pd
 from speechalgo.features import DeltaFeatures, SpectralFeatures, TemporalFeatures
 
-"""Uploading the dataset
-
-Also make sure to scale up the entries of the dataset. Right now the you are using just a small amount of data. Check if the accuracy significantly increases in that
-"""
-
 from datasets import load_dataset
 
 hi = load_dataset("google/fleurs", "hi_in", split="train[:2000]", trust_remote_code=True)
@@ -33,16 +28,15 @@ en = load_dataset("google/fleurs", "en_us", split="train[:2000]", trust_remote_c
 
 """Extracting the MFCC features and creating the dataset
 
-Make changes to include quantization here
 """
 
 import numpy as np
 import librosa
 
-def extract_mfcc(audio_array, sample_rate=16000, n_mfcc=40, max_len=200): #this function will take a single audio clip as a numpy array and retuem the feature vector for it
+def extract_mfcc(audio_array, sample_rate=16000, n_mfcc=40, max_len=200): 
 #each number in this vector is the dct coefficient describing the frequency energy shape of one window of the audio signal
 
-# 1. Feature extraction -> Outputs shape: (40, T)
+# 1. Feature extraction - Outputs shape: (40, T)
     mfcc = librosa.feature.mfcc(y=audio_array, sr=sample_rate, n_mfcc=n_mfcc)
 
     # 2. Take the mean across the time axis (axis=1)
@@ -65,17 +59,15 @@ def extract_mfcc(audio_array, sample_rate=16000, n_mfcc=40, max_len=200): #this 
     return mfcc_mean
 
 
-#This is where the dataset conversion essentially takes place
 def build_features(dataset, label, sample_rate=16000):
-    X, y = [], [] #X will collect the features and y will collect the labels per audio sample
+    X, y = [], [] 
     X_1stFeat, X_2ndFeat= [], []
     for item in dataset:
         audio = item["audio"]["array"] #Extracts the numpy array of the amplitude values
         sr    = item["audio"]["sampling_rate"] #Extracts the sampling rate for the particular audio signal
 
-        # Resample if needed
+        # Resampling if needed
         # If the sampling rate for two audio files is different, then the MFCC features for the audio files are not comparable
-        # Hence we bring the sampling rate of all the audio files to a standard value
         if sr != sample_rate:
             audio = librosa.resample(audio, orig_sr=sr, target_sr=sample_rate)
 
@@ -114,8 +106,8 @@ from scipy.stats import mode
 
 
 # Split the combined X and y into training and testing sets
-X_train_full, X_test_full, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y) #Thr train test split function requires that each of the arrays passed on have the exact same lenght
-#Thats why we keep the training array combined and split it later
+X_train_full, X_test_full, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42, stratify=y) 
+
 
 # Normalize the entire training and testing feature sets
 scaler = StandardScaler()
@@ -132,7 +124,7 @@ model_hi = GaussianMixture(
     covariance_type='full',
     random_state=42
 )
-model_hi.fit(X_train_hi_scaled); #In the case of Gaussian Mixture Model the fitting of data will comprise of iterating through the EM algorithm meaning its trying to find the best gaussian distributions to fit the two clusters of data that we have
+model_hi.fit(X_train_hi_scaled); 
 
 
 # Model building and training for English
