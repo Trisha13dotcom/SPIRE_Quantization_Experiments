@@ -141,22 +141,22 @@ class LanguageBrain(sb.core.Brain):
             )
             
 
-            cm = confusion_matrix(
-            self.all_targets,
-            self.all_preds
-             )
+            # cm = confusion_matrix(
+            # self.all_targets,
+            # self.all_preds
+            #  )
             
-            save_path = os.path.join(
-             self.hparams.output_folder,
-            f"confusion_matrix_epoch_{epoch}.png"
-             )
+            # save_path = os.path.join(
+            #  self.hparams.output_folder,
+            # f"confusion_matrix_epoch_{epoch}.png"
+            #  )
 
-            print(f"Saving confusion matrix to: {save_path}")
+            # print(f"Saving confusion matrix to: {save_path}")
 
-            plt.savefig(save_path)
+            # plt.savefig(save_path)
 
-            print("\nConfusion Matrix:")
-            print(cm)
+            # print("\nConfusion Matrix:")
+            # print(cm)
 
 
 
