@@ -20,7 +20,7 @@ from speechalgo.features import SpectralFeatures, TemporalFeatures, DeltaFeature
 
 
 def extract_mfcc(audio_array, sample_rate=16000, n_mfcc=40):
-    # 1. Feature extraction -> Outputs shape: (40, T)
+    # 1. Feature extraction - Outputs shape: (40, T)
     mfcc = librosa.feature.mfcc(y=audio_array, sr=sample_rate, n_mfcc=n_mfcc)
 
     # 2. Take the mean across the time axis (axis=1)
@@ -43,24 +43,18 @@ def extract_mfcc(audio_array, sample_rate=16000, n_mfcc=40):
     return mfcc_mean
 
 
-#This is where the dataset conversion essentially takes place
+
 def build_features(dataset, label, sample_rate=16000):
-    X, y = [], [] #X will collect the features and y will collect the labels per audio sample
+    X, y = [], [] 
     expected_feature_length = 3 * 40  # Based on n_mfcc=40 from extract_mfcc defaults
 
     for i, item in enumerate(dataset):
         audio = item["audio"]["array"] #Extracts the numpy array of the amplitude values
         sr    = item["audio"]["sampling_rate"] #Extracts the sampling rate for the particular audio signal
 
-        # Ig the python script expects a 32 bit floating point input so convert
-        # the raw audio samples into that format before applying the
-        # normalization and the quantization
         audio = np.array(audio, dtype=np.float32)
 
         #CHANGE- Resampling should happen before the quantization
-        # Resample if needed
-        # If the sampling rate for two audio files is different, then the MFCC features for the audio files are not comparable
-        # Hence we bring the sampling rate of all the audio files to a standard value
         if sr != sample_rate:
             audio = librosa.resample(audio, orig_sr=sr, target_sr=sample_rate)
 
